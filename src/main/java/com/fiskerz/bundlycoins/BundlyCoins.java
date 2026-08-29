@@ -1,7 +1,9 @@
 package com.fiskerz.bundlycoins;
 
 import com.fiskerz.bundlycoins.coins.Coins;
-import com.fiskerz.bundlycoins.pouches.Pouches;
+import com.fiskerz.bundlycoins.pouches.BasicPouches;
+import com.fiskerz.bundlycoins.pouches.CopperPouches;
+import com.fiskerz.bundlycoins.pouches.IronPouches;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -35,7 +37,9 @@ public class BundlyCoins {
         NeoForge.EVENT_BUS.register(this);
 
         Coins.register(modEventBus);
-        Pouches.register(modEventBus);
+        BasicPouches.register(modEventBus);
+        CopperPouches.register(modEventBus);
+        IronPouches.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

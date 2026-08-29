@@ -7,5 +7,9 @@
   "item.bundlycoins.small_basic_pouch": "Small basic pouch",
   "item.bundlycoins.basic_pouch": "Basic pouch",
   "item.bundlycoins.big_basic_pouch": "Big basic pouch",
-  "item.bundlycoins.huge_basic_pouch": "Huge basic pouch"
+  "item.bundlycoins.huge_basic_pouch": "Huge basic pouch",
+  "item.bundlycoins.small_copper_pouch": "Small copper pouch",
+  "item.bundlycoins.big_copper_pouch": "Big copper pouch",
+  "item.bundlycoins.small_iron_pouch": "Small iron pouch",
+  "item.bundlycoins.big_iron_pouch": "Big iron pouch"
 }
