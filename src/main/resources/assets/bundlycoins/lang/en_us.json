@@ -3,5 +3,9 @@
   "item.bundlycoins.iron_coin": "Iron coin",
   "item.bundlycoins.gold_coin": "Gold coin",
   "item.bundlycoins.diamond_coin": "Diamond coin",
-  "item.bundlycoins.netherite_coin": "Netherite coin"
+  "item.bundlycoins.netherite_coin": "Netherite coin",
+  "item.bundlycoins.small_basic_pouch": "Small basic pouch",
+  "item.bundlycoins.basic_pouch": "Basic pouch",
+  "item.bundlycoins.big_basic_pouch": "Big basic pouch",
+  "item.bundlycoins.huge_basic_pouch": "Huge basic pouch"
 }

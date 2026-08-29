@@ -1,4 +1,4 @@
-package com.fiskerz.bundlycoins.copper_coin;
+package com.fiskerz.bundlycoins.coins;
 
 import com.fiskerz.bundlycoins.BundlyCoins;
 import net.minecraft.world.item.Item;
@@ -19,7 +19,7 @@ public class Coins {
 
     public static final DeferredItem<Item> NETHERITECOIN = ITEMS.register("netherite_coin", () -> new Item(new Item.Properties()));
 
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
+    public static void register(IEventBus coinEventBus) {
+        ITEMS.register(coinEventBus);
     }
 }
