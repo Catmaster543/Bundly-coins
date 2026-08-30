@@ -11,5 +11,12 @@
   "item.bundlycoins.small_copper_pouch": "Small copper pouch",
   "item.bundlycoins.big_copper_pouch": "Big copper pouch",
   "item.bundlycoins.small_iron_pouch": "Small iron pouch",
-  "item.bundlycoins.big_iron_pouch": "Big iron pouch"
+  "item.bundlycoins.big_iron_pouch": "Big iron pouch",
+  "item.bundlycoins.small_gold_pouch": "Small gold pouch",
+  "item.bundlycoins.medium_gold_pouch": "Medium gold pouch",
+  "item.bundlycoins.big_gold_pouch": "Big gold pouch",
+  "item.bundlycoins.small_diamond_pouch": "Small diamond pouch",
+  "item.bundlycoins.medium_diamond_pouch": "Medium diamond pouch",
+  "item.bundlycoins.big_diamond_pouch": "Big diamond pouch",
+  "item.bundlycoins.huge_diamond_pouch": "Huge diamond pouch"
 }

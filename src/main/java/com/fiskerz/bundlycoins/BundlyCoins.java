@@ -1,9 +1,7 @@
 package com.fiskerz.bundlycoins;
 
 import com.fiskerz.bundlycoins.coins.Coins;
-import com.fiskerz.bundlycoins.pouches.BasicPouches;
-import com.fiskerz.bundlycoins.pouches.CopperPouches;
-import com.fiskerz.bundlycoins.pouches.IronPouches;
+import com.fiskerz.bundlycoins.pouches.*;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -40,6 +38,8 @@ public class BundlyCoins {
         BasicPouches.register(modEventBus);
         CopperPouches.register(modEventBus);
         IronPouches.register(modEventBus);
+        GoldPouches.register(modEventBus);
+        DiamondPouches.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
