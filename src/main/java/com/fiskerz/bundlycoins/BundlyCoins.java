@@ -40,6 +40,8 @@ public class BundlyCoins {
         IronPouches.register(modEventBus);
         GoldPouches.register(modEventBus);
         DiamondPouches.register(modEventBus);
+        NetheritePouches.register(modEventBus);
+        SpecialPouches.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

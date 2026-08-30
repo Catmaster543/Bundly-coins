@@ -18,5 +18,10 @@
   "item.bundlycoins.small_diamond_pouch": "Small diamond pouch",
   "item.bundlycoins.medium_diamond_pouch": "Medium diamond pouch",
   "item.bundlycoins.big_diamond_pouch": "Big diamond pouch",
-  "item.bundlycoins.huge_diamond_pouch": "Huge diamond pouch"
+  "item.bundlycoins.large_diamond_pouch": "Large diamond pouch",
+  "item.bundlycoins.small_netherite_pouch": "Small netherite pouch",
+  "item.bundlycoins.medium_netherite_pouch": "Medium netherite pouch",
+  "item.bundlycoins.big_netherite_pouch": "Big netherite pouch",
+  "item.bundlycoins.large_netherite_pouch": "Large netherite pouch",
+  "item.bundlycoins.ruby_netherite_pouch": "Ruby embedded netherite pouch"
 }

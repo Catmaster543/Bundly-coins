@@ -12,7 +12,7 @@ public class DiamondPouches {
     public static final DeferredItem<Item> SMALLDIAMONDPOUCH = ITEMS.register("small_diamond_pouch", () -> new Item(new  Item.Properties()));
     public static final DeferredItem<Item> MEDIDIAMONDPOUCH = ITEMS.register("medium_diamond_pouch", () -> new Item(new  Item.Properties()));
     public static final DeferredItem<Item> BIGDIAMONDPOUCH = ITEMS.register("big_diamond_pouch", () -> new Item(new  Item.Properties()));
-    public static final DeferredItem<Item> HUGEDIAMONDPOUCH = ITEMS.register("huge_diamond_pouch", () -> new Item(new  Item.Properties()));
+    public static final DeferredItem<Item> LARGEDIAMONDPOUCH = ITEMS.register("large_diamond_pouch", () -> new Item(new  Item.Properties()));
 
     public static void register(IEventBus diamondPouchEventBus) {
         ITEMS.register(diamondPouchEventBus);

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "bundlycoins:item/huge_diamond_pouch"
+    "layer0": "bundlycoins:item/medium_netherite_pouch"
   }
 }
