@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:large_diamond_pouch"
+    },
+    "D": {
+      "item": "minecraft:ancient_debris"
+    },
+    "A": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "G": {
+      "item": "minecraft:gilded_blackstone"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "DPD",
+    "DAD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:small_netherite_pouch"
+  }
+}

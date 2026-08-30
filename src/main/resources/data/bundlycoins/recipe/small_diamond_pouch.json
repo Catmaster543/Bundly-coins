@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:big_gold_pouch"
+    },
+    "S": {
+      "item": "minecraft:sculk"
+    },
+    "B": {
+      "item": "minecraft:diamond_block"
+    },
+    "L": {
+      "item": "minecraft:lapis_block"
+    }
+  },
+  "pattern": [
+    "SPS",
+    "LBL",
+    "SPS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:small_diamond_pouch"
+  }
+}

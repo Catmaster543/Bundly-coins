@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:large_netherite_pouch"
+    },
+    "E": {
+      "item": "minecraft:deepslate_emerald_ore"
+    },
+    "A": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "N": {
+      "item": "minecraft:netherite_block"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "D": {
+      "item": "minecraft:deepslate_coal_ore"
+    },
+    "O": {
+      "item": "minecraft:conduit"
+    }
+  },
+  "pattern": [
+    "SNS",
+    "EPD",
+    "OAO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:ruby_netherite_pouch"
+  }
+}

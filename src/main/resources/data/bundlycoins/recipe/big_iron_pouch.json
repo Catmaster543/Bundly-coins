@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:small_iron_pouch"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "B": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "pattern": [
+    "CPC",
+    "PBP",
+    "CPC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:big_iron_pouch"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:basic_pouch"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    }
+  },
+  "pattern": [
+    " C ",
+    "CPC",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:big_basic_pouch"
+  }
+}

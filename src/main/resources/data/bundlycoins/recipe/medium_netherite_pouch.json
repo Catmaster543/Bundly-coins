@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:small_netherite_pouch"
+    },
+    "D": {
+      "item": "minecraft:ancient_debris"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "DOD",
+    "NPN",
+    "DOD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:medium_netherite_pouch"
+  }
+}

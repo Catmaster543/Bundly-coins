@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:big_iron_pouch"
+    },
+    "A": {
+      "item": "minecraft:golden_apple"
+    },
+    "B": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "APA",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:small_gold_pouch"
+  }
+}

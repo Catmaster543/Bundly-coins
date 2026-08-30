@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:medium_gold_pouch"
+    },
+    "G": {
+      "item": "minecraft:glowstone"
+    },
+    "B": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "GPG",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:big_gold_pouch"
+  }
+}

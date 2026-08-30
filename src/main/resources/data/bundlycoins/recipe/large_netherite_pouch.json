@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:big_netherite_pouch"
+    },
+    "C": {
+      "item": "bundlycoins:netherite_coin"
+    },
+    "E": {
+      "item": "minecraft:deepslate_emerald_ore"
+    },
+    "A": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "B": {
+      "item": "minecraft:netherite_block"
+    },
+    "S": {
+      "item": "minecraft:sculk_sensor"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "pattern": [
+    "BEC",
+    "SPS",
+    "DAD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:large_netherite_pouch"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:small_gold_pouch"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
+    "B": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "pattern": [
+    "IPI",
+    "IBI",
+    "IPI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:medium_gold_pouch"
+  }
+}

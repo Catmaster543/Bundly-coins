@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:medium_netherite_pouch"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "E": {
+      "item": "minecraft:emerald_block"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "NPE",
+    "NNN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:big_netherite_pouch"
+  }
+}

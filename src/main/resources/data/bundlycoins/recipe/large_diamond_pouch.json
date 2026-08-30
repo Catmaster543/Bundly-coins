@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "bundlycoins:big_diamond_pouch"
+    },
+    "D": {
+      "item": "minecraft:diamond_ore"
+    },
+    "B": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "pattern": [
+    "DBD",
+    "BPB",
+    "DBD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bundlycoins:large_diamond_pouch"
+  }
+}
