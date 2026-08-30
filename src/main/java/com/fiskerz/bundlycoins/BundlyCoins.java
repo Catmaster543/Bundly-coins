@@ -34,7 +34,10 @@ public class BundlyCoins {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        CreativeModeModTab.register(modEventBus);
+
         Coins.register(modEventBus);
+
         BasicPouches.register(modEventBus);
         CopperPouches.register(modEventBus);
         IronPouches.register(modEventBus);
