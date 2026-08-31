@@ -1,6 +1,8 @@
 package com.fiskerz.bundlycoins;
 
 import com.fiskerz.bundlycoins.coins.Coins;
+import com.fiskerz.bundlycoins.logic.SizeTracker;
+import com.fiskerz.bundlycoins.logic.StackSizeChangedEvent;
 import com.fiskerz.bundlycoins.pouches.*;
 import org.slf4j.Logger;
 
@@ -45,6 +47,7 @@ public class BundlyCoins {
         DiamondPouches.register(modEventBus);
         NetheritePouches.register(modEventBus);
         SpecialPouches.register(modEventBus);
+
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

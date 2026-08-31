@@ -1,0 +1,40 @@
+/*
+    @SubscribeEvent
+    public static void onPlayerTick(StackSizeChangedEvent event) {
+        if (event.player.getInventory().getItem(event.slot) == Coins.TESTCOIN.toStack()) {
+            count = event.newCount;
+        }
+    }
+    */
+
+
+    // Triggered when right-clicked
+    // Just like in C# all methods need to be called, but many properties cannot be accessed outside of methods in comparison
+
+    /* Old stuff
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        ItemStack itemstack = player.getItemInHand(hand);
+        CopperCoin.countItems(itemstack);
+        return InteractionResultHolder.pass(itemstack);
+    }
+
+
+
+    // Gets the amount of items held in the hand
+    // Uses the setCount method with count -1 to change the amount held by one
+
+
+    public static final void countItems(ItemStack stack) {
+        count = stack.getCount();
+    }
+
+
+
+    // A simple void that sets the item count to whatever is sent
+
+
+    public static final void setCount(ItemStack stack, int count) {
+        stack.setCount(count);
+    }
+
+     */
