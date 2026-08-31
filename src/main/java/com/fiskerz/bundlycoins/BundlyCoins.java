@@ -1,8 +1,6 @@
 package com.fiskerz.bundlycoins;
 
 import com.fiskerz.bundlycoins.coins.Coins;
-import com.fiskerz.bundlycoins.logic.SizeTracker;
-import com.fiskerz.bundlycoins.logic.StackSizeChangedEvent;
 import com.fiskerz.bundlycoins.pouches.*;
 import org.slf4j.Logger;
 
