@@ -2,6 +2,11 @@ package com.fiskerz.bundlycoins;
 
 import com.fiskerz.bundlycoins.coins.Coins;
 import com.fiskerz.bundlycoins.pouches.*;
+import com.fiskerz.bundlycoins.screen.ModMenuTypes;
+import com.fiskerz.bundlycoins.screen.custom.PouchScreen;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -45,6 +50,7 @@ public class BundlyCoins {
         DiamondPouches.register(modEventBus);
         NetheritePouches.register(modEventBus);
         SpecialPouches.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -60,4 +66,5 @@ public class BundlyCoins {
     public void onServerStarting(ServerStartingEvent event) {
 
     }
+
 }
