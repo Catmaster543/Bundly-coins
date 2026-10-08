@@ -6,12 +6,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemContainerContents;
 
 public class PouchContainer extends SimpleContainer {
-    public static final int SIZE = 3;
+    public static int size;
+
 
     private final ItemStack pouch;
 
-    public PouchContainer(ItemStack pouch) {
-        super(SIZE);
+    public PouchContainer(ItemStack pouch, int size) {
+        super(size);
         this.pouch = pouch;
         pouch.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
                 .copyInto(this.getItems());
@@ -25,7 +26,7 @@ public class PouchContainer extends SimpleContainer {
 
     @Override
     public boolean canPlaceItem(int slot, ItemStack stack) {
-        // Stops pouch-inside-pouch, which will eat your items.
+        // Stops pouch-inside-pouch, which will eat items.
         return !(stack.getItem() instanceof BasicPouchItem);
     }
 }

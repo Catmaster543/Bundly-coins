@@ -3,6 +3,7 @@ package com.fiskerz.bundlycoins.screen.custom;
 import com.fiskerz.bundlycoins.pouches.PouchContainer;
 import com.fiskerz.bundlycoins.screen.ModMenuTypes;
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,29 +14,41 @@ import net.minecraft.world.item.ItemStack;
 
 public class PouchMenu extends AbstractContainerMenu {
 
-    public static final int POUCH_SLOT_COUNT = PouchContainer.SIZE;
 
-    private static final int VANILLA_SLOT_COUNT = 36; // 27 inventory + 9 hotbar
-    private static final int POUCH_FIRST_SLOT = 0;
-    private static final int VANILLA_FIRST_SLOT = POUCH_SLOT_COUNT;
+    public static final int POUCH_SLOT_COUNT = PouchContainer.size;
 
+    private final int pouchSlots;
     private final Container pouchContainer;
+    private final ResourceLocation texture;
 
     // Client-side constructor — this is the one ModMenuTypes uses.
-    public PouchMenu(int containerId, Inventory playerInventory, RegistryFriendlyByteBuf extraData) {
-        this(containerId, playerInventory, new SimpleContainer(POUCH_SLOT_COUNT));
+    public PouchMenu(int containerId, Inventory inv, RegistryFriendlyByteBuf extraData) {
+        this(containerId, inv, new SimpleContainer(extraData.readVarInt()), extraData.readResourceLocation());
+        System.out.println("client menu built, slots=" + this.slots.size());
     }
 
     // Server-side constructor.
-    public PouchMenu(int containerId, Inventory playerInventory, Container pouchContainer) {
+    public PouchMenu(int containerId, Inventory playerInventory, Container pouchContainer, ResourceLocation texture) {
         super(ModMenuTypes.POUCH_MENU.get(), containerId);
         checkContainerSize(pouchContainer, POUCH_SLOT_COUNT);
         this.pouchContainer = pouchContainer;
+        this.texture = texture;
+        this.pouchSlots = pouchContainer.getContainerSize();
+
         pouchContainer.startOpen(playerInventory.player);
 
-        // Pouch slots first, so they occupy indices 0..2 — centred on a 176px wide GUI.
-        for (int col = 0; col < POUCH_SLOT_COUNT; col++) {
-            this.addSlot(new Slot(pouchContainer, col, 61 + col * 18, 35));
+        int size = pouchContainer.getContainerSize();
+        int rows = (size + 8) / 9;        // ceiling division
+        int slotIndex = 0;
+        int firstRowY = (rows == 1) ? 35 : 18;
+
+        for (int row = 0; row < rows; row++) {
+            int slotsInRow = Math.min(9, size - row * 9);
+            int rowStartX = (176 - slotsInRow * 18) / 2;
+
+            for (int col = 0; col < slotsInRow; col++) {
+                this.addSlot(new Slot(pouchContainer, slotIndex++, rowStartX + col * 18, firstRowY + row * 18));
+            }
         }
 
         // Player inventory, 3 rows of 9.
@@ -49,6 +62,11 @@ public class PouchMenu extends AbstractContainerMenu {
         for (int col = 0; col < 9; col++) {
             this.addSlot(new Slot(playerInventory, col, 8 + col * 18, 142));
         }
+        System.out.println("server menu built, slots=" + this.slots.size());
+    }
+
+    public ResourceLocation getTexture() {
+        return this.texture;
     }
 
     @Override
@@ -59,14 +77,17 @@ public class PouchMenu extends AbstractContainerMenu {
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSource = sourceStack.copy();
 
-        if (index < POUCH_SLOT_COUNT) {
-            // Pouch -> player
-            if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT, VANILLA_FIRST_SLOT + VANILLA_SLOT_COUNT, true)) {
+        int vanillaFirst = this.pouchSlots;
+        int vanillaEnd = vanillaFirst + 36;
+
+        if (index < this.pouchSlots) {
+            // pouch -> player
+            if (!moveItemStackTo(sourceStack, vanillaFirst, vanillaEnd, true)) {
                 return ItemStack.EMPTY;
             }
-        } else if (index < VANILLA_FIRST_SLOT + VANILLA_SLOT_COUNT) {
-            // Player -> pouch
-            if (!moveItemStackTo(sourceStack, POUCH_FIRST_SLOT, POUCH_FIRST_SLOT + POUCH_SLOT_COUNT, false)) {
+        } else if (index < vanillaEnd) {
+            // player -> pouch
+            if (!moveItemStackTo(sourceStack, 0, this.pouchSlots, false)) {
                 return ItemStack.EMPTY;
             }
         } else {

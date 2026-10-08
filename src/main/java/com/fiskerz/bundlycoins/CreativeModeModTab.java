@@ -28,8 +28,10 @@ public class CreativeModeModTab {
                 output.accept(BasicPouches.BASICPOUCH);
                 output.accept(BasicPouches.BIGBASICPOUCH);
                 output.accept(BasicPouches.HUGEBASICPOUCH);
+                /*
                 output.accept(CopperPouches.SMALLCOPPERPOUCH);
                 output.accept(CopperPouches.BIGCOPPERPOUCH);
+                 */
                 output.accept(IronPouches.SMALLIRONPOUCH);
                 output.accept(IronPouches.BIGIRONPOUCH);
                 output.accept(GoldPouches.SMALLGOLDPOUCH);

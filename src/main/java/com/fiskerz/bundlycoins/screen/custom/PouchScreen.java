@@ -10,9 +10,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class PouchScreen extends AbstractContainerScreen<PouchMenu> {
-    private static final ResourceLocation GUI_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/pouch_gui.png");
-
     public PouchScreen(PouchMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
         System.out.println("Reached the first line in the PouchScreen method");
@@ -31,7 +28,7 @@ public class PouchScreen extends AbstractContainerScreen<PouchMenu> {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         // leftPos/topPos are already the centred coordinates — don't recompute them.
-        guiGraphics.blit(GUI_TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
+        guiGraphics.blit(this.menu.getTexture(), this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
     }
 
     @Override
