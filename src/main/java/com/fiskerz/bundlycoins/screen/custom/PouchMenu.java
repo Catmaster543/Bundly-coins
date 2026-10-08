@@ -2,6 +2,7 @@ package com.fiskerz.bundlycoins.screen.custom;
 
 import com.fiskerz.bundlycoins.pouches.PouchContainer;
 import com.fiskerz.bundlycoins.screen.ModMenuTypes;
+import com.fiskerz.bundlycoins.util.ModTags;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
@@ -24,7 +25,6 @@ public class PouchMenu extends AbstractContainerMenu {
     // Client-side constructor — this is the one ModMenuTypes uses.
     public PouchMenu(int containerId, Inventory inv, RegistryFriendlyByteBuf extraData) {
         this(containerId, inv, new SimpleContainer(extraData.readVarInt()), extraData.readResourceLocation());
-        System.out.println("client menu built, slots=" + this.slots.size());
     }
 
     // Server-side constructor.
@@ -47,7 +47,7 @@ public class PouchMenu extends AbstractContainerMenu {
             int rowStartX = (176 - slotsInRow * 18) / 2;
 
             for (int col = 0; col < slotsInRow; col++) {
-                this.addSlot(new Slot(pouchContainer, slotIndex++, rowStartX + col * 18, firstRowY + row * 18));
+                this.addSlot(new TagSlot(pouchContainer, slotIndex++, rowStartX + col * 18, firstRowY + row * 18));
             }
         }
 
@@ -62,7 +62,6 @@ public class PouchMenu extends AbstractContainerMenu {
         for (int col = 0; col < 9; col++) {
             this.addSlot(new Slot(playerInventory, col, 8 + col * 18, 142));
         }
-        System.out.println("server menu built, slots=" + this.slots.size());
     }
 
     public ResourceLocation getTexture() {
@@ -104,6 +103,19 @@ public class PouchMenu extends AbstractContainerMenu {
         return copyOfSource;
     }
 
+    public static class TagSlot extends Slot {
+        TagSlot(Container inventory, int index, int xPosition, int yPosition) {
+            super(inventory, index, xPosition, yPosition);
+        }
+
+        @Override
+        public boolean mayPlace(ItemStack stack) {
+            return stack.is(ModTags.Items.COINS);
+        }
+    }
+
+
+
     @Override
     public boolean stillValid(Player player) {
         return this.pouchContainer.stillValid(player);
@@ -114,4 +126,6 @@ public class PouchMenu extends AbstractContainerMenu {
         super.removed(player);
         this.pouchContainer.stopOpen(player);
     }
+
+
 }

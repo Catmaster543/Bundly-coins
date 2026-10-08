@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item;
 
 public class ModTags {
     public static class Items {
-        private static final TagKey<Item> COINS = createTag("coins");
+        public static final TagKey<Item> COINS = createTag("coins");
         private static final TagKey<Item> POUCHES = createTag("pouches");
 
         private static TagKey<Item> createTag(String name) {
