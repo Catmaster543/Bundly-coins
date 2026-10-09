@@ -19,10 +19,10 @@ public class BasicPouches {
             ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/basic_pouch_gui.png")));
     public static final DeferredItem<Item> BIGBASICPOUCH = ITEMS.register("big_basic_pouch", () -> new BasicPouchItem(new Item.Properties().stacksTo(1),
             3,
-            ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/basic_pouch_gui.png")));
+            ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/big_basic_pouch_gui.png")));
     public static final DeferredItem<Item> HUGEBASICPOUCH = ITEMS.register("huge_basic_pouch", () -> new BasicPouchItem(new Item.Properties().stacksTo(1),
             5,
-            ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/basic_pouch_gui.png")));
+            ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/huge_basic_pouch_gui.png")));
     public static final DeferredItem<Item> SMALLCOPPERPOUCH = ITEMS.register("small_copper_pouch", () -> new BasicPouchItem(new Item.Properties().stacksTo(1),
             6,
             ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/basic_pouch_gui.png")));
