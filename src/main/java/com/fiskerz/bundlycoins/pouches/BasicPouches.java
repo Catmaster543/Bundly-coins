@@ -25,10 +25,10 @@ public class BasicPouches {
             ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/huge_basic_pouch_gui.png")));
     public static final DeferredItem<Item> SMALLCOPPERPOUCH = ITEMS.register("small_copper_pouch", () -> new BasicPouchItem(new Item.Properties().stacksTo(1),
             6,
-            ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/basic_pouch_gui.png")));
+            ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/small_copper_pouch_gui.png")));
     public static final DeferredItem<Item> BIGCOPPERPOUCH = ITEMS.register("big_copper_pouch", () -> new BasicPouchItem(new Item.Properties().stacksTo(1),
             8,
-            ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/basic_pouch_gui.png")));
+            ResourceLocation.fromNamespaceAndPath(BundlyCoins.MODID, "textures/gui/pouch/big_copper_pouch_gui.png")));
 
     public static void register(IEventBus basicPouchEventBus) {
         ITEMS.register(basicPouchEventBus);
