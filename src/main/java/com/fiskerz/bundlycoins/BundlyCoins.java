@@ -49,7 +49,7 @@ public class BundlyCoins {
         GoldPouches.register(modEventBus);
         DiamondPouches.register(modEventBus);
         NetheritePouches.register(modEventBus);
-        SpecialPouches.register(modEventBus);
+        //SpecialPouches.register(modEventBus);
         ModMenuTypes.register(modEventBus);
 
 

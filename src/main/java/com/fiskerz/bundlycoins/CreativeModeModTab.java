@@ -45,7 +45,7 @@ public class CreativeModeModTab {
                 output.accept(NetheritePouches.MEDINETHERITEPOUCH);
                 output.accept(NetheritePouches.BIGNETHERITEPOUCH);
                 output.accept(NetheritePouches.LARGENETHERITEPOUCH);
-                output.accept(SpecialPouches.RUBYNETHERITEPOUCH);
+                //output.accept(SpecialPouches.RUBYNETHERITEPOUCH);
             }).build());
 
     public static void register(IEventBus cTabEventBus) {

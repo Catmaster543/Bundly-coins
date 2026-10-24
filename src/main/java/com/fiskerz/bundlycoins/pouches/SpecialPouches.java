@@ -9,9 +9,11 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class SpecialPouches {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BundlyCoins.MODID);
 
-    public static final DeferredItem<Item> RUBYNETHERITEPOUCH = ITEMS.register("ruby_netherite_pouch", () -> new Item(new  Item.Properties()));
+    //public static final DeferredItem<Item> RUBYNETHERITEPOUCH = ITEMS.register("ruby_netherite_pouch", () -> new Item(new  Item.Properties()));
 
-    public static void register(IEventBus specialPouchEventBus) {
+    /*public static void register(IEventBus specialPouchEventBus) {
         ITEMS.register(specialPouchEventBus);
     }
+
+     */
 }
