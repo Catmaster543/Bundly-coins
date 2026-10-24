@@ -17,6 +17,10 @@ public class CoinItem extends Item {
         this.multiplier = multiplier;
     }
 
+    public float getMultiplier() {
+        return this.multiplier;
+    }
+
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         float value = stack.getCount() * multiplier;
